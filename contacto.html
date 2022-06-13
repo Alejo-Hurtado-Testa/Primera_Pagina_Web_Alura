@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Contacto - Barberia Alura</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <div class="encabezado">
+                <h1><img src="imagenes/logo.png" alt="Logo de la Barberia Alura"></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Formula 1</a></li>
+                        <li><a href="productos.html">Productos</a></li> 
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <form>
+                <!--ACA CREAMOS LOS CUADROS DE TEXTO Y SUS NOMBRES, EL FOR ES PARA QUE LA ETIQUETA SE REFIERE AL CUADRITO QUE CREAMOS. LA PALABRA "required" SIRVE PARA VOLVER UN CAMPO OBLIGATORIO-->
+                <label for="nombreapellido">Nombre y Apellido</label>
+                <input type="text" id="nombreapellido" class="input-padron" required>
+
+                <label for="correoelectronico">Correo Electronico</label>
+                <input type="email" id="correoelectronico" class="input-padron" required placeholder="email@dominio.com"> <!--"placeholder" SIRVE PARA MOSTRAR COMO DEBE SER COMPLETADO EL CAMPO-->
+
+                <label for="telefono">Numero de Telefono</label>
+                <input type="tel" id="telefono" class="input-padron" required placeholder="(XX) XXXX XXXX">
+
+                <!--ESTO ES PARA CREAR UN CUADRO DE TEXTO DONDE SE PUEDE ESCRIBIR, "cols" REPRESSENTA LAS COLUMNAS Y "rows" LAS FILAS-->
+                <label for="mensaje">Menssaje</label> 
+                <textarea cols="70" rows="10" id="mensaje" class="input-padron" required></textarea>
+
+                <fieldset> <!--CON ESTA ETIQUETA DECIMOS  QUE LO QUE LE ESTAMOS PASANDO PERTENCE A UN MISMO GRUPO Y NO USA LA ETIQUETA "p" USA LA "legend"-->
+                    <!--ESTO LO QUE HACE ES PROGRAMAR UN MULTIPLE CHOICE CON UNA SOLA OPCION POSIBLE, CADA UNO DE ELLOS REPRESENTA UN ITEM, PARA ESTE TIPO DE INPUT NECESITAMOS UN "value"-->
+                    <!--PARA HACER QUE UNA OPCION PUEDA SER SELECCIONADA USAMOS EL "name", QUE LO QUE HACE ES DECIRLE QUE ESOS ITEMS PERTENECEN A UN MISMO GRUPO (AGRUPARLOS)-->
+                    <legend>¿Como le gustaria que lo contactemos?</legend>
+                    <!--PARA QUE LOS PUNTITOS APAREZCAN PRIMERO QUE LAS PALABRAS, PONEMOS LOS "INPUTS" DENTRO DE LOS "LABELS"-->
+                    <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Email</label>
+                    
+                    <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Telefono</label>
+                    
+                    <label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked>WhatsApp</label>
+                </fieldset>
+
+                <fieldset>
+                    <!--PARA CREAR UNA LISTITA DE SELECCION-->
+                    <legend>¿En que horario prefiere ser atendido?</legend>
+                    <select>
+                        <option>Mañana</option>
+                        <option>Tarde</option>
+                        <option>Noche</option>
+                    </select>
+                </fieldset>
+
+                <!--ESTO  ES PARA CREAR UNA CAJITA DE CHECK, OSEA PARA ACEPTAR O NO, EL "checked" SIRVE PARA DEJAR MARCADA UNA CASILLA U OPCION EN CASO DE QUE EL USUARIO SE OLVIDE DE LLENARLA-->
+                <label class="checkbox"><input type="checkbox" checked>Le gustaria recibir novedades de la Barberia Alura?</label>
+
+                <!--ESTO ES PARA CREAR UN BOTON DE "ENVIAR". EL "VALUE ES PARA QUE DIGA LO QUE LE PUSIMOS, OSEA DIGA "ENVIAR FORMULARIO"-->
+                <input type="submit" value="Enviar Formulario" class="enviar">
+            </form>
+
+            <table> <!--ESTA PROPIEDAD ES PARA CREAR TABLAS-->
+                <thead> <!--ESTA ETIQUETA ES PARA CREAR UN ENCABEZADO EN LA TABLA, ES ESPECIAL DE LA ETIQUETA "TABLE"-->
+                    <tr> <!--DEFINIMOS LAS LINEAS O FILAS-->
+                        <th>Día</th> <!--AL IGUAL QUE "thead" TAMBIEN HAY QUE PONERLE LA "H" A LAS COLUMNAS QUE FORMAN EL ENCABEZADO-->
+                        <th>Horario</th> 
+                    </tr>
+                </thead>
+                
+                <tbody> <!--ESTA ETIQUETA ESPECIAL TAMBIEN, HACE REFERENCIA AL CUERPO DE LA TABLA, EL CONTENIDO, DESPUES DEL ENCABEZADO-->
+                    <tr>
+                        <td>Martes</td> <!--DEFINIMOS LAS COLUMNAS-->
+                        <td>08hs ~ 20hs</td>
+                    </tr>
+    
+                    <tr>
+                        <td>Miércoles</td>
+                        <td>08hs ~ 20hs</td>
+                    </tr>
+    
+                    <tr>
+                        <td>Jueves</td>
+                        <td>08hs ~ 20hs</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Viernes</td>
+                        <td>08hs ~ 20hs</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+
+        <footer>
+            <img src="imagenes/logo-blanco.png" alt="Logo de la Barberia Alura">
+            <p class="copyright">&copy Copyright Barberia Alura - 2022</p>
+        </footer>
+    </body>
+</html>

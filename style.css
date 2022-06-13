@@ -1,0 +1,313 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: #BBBB;
+    padding: 20px 0;
+}
+
+.encabezado {
+    width: 940px; /* ESTO ES PARA ESTABLECER EL ANCHO DE LA PANTALLA QUE ES 940 EL PROMEDIO */
+    position: relative; /* PARA QUE LA POSICION SEA RELACITA A LA POSICION DONDE SE ENCUENTRA */
+    margin: 0 auto; /* ESTO ES PARA HACER UN ESPACIO, CERO PARA ARRIBA Y ABAJO Y AUTOMATICO PARA LOS COSTADOS */
+}
+
+nav {
+    position: absolute; /* PARA QUE LA POSICION SEA RELACITA AL VALOR QUE NOSOTROS LE ASIGNEMOS */
+    top: 110px;
+    right: 60px;
+}
+
+nav li {
+    display: inline; /* PONEMOS EL INLINE PARA QUE SOLAMENTE OCUPE SU RESPECTIVO ESPACIO, OSEA EL ESPACIO REAL */
+    margin: 0 0 0 20px; /* RECIBE 4 PARAMETROS = SUPERIOR, DERECHA, INFERIOR, IZQUIERA. SI PONEMOS UNO SOLO SE APLICA A TODOS LOS LADOS */
+    /* EL MARGIN SIGUE EL SENTIDO DE LAS AGUJAS DEL RELOJ */
+}
+
+nav a {
+    text-transform: uppercase; /* PARA TRANSFORMAR EL MAYUSCULA ALGUNA PALABRA */
+    color: #000;
+    font-weight: bold; /* PARA PONERLO EN NEGRITA */
+    font-size: 22px;
+    text-decoration: none; /* PARA SACAR LA DECORACION DEL TEXTO O PALABRA O PARA AGREGAR DECORACIONES */
+}
+/* PARA CAPTURAR EL COMPORTAMIENTO DEL MOVIMIENTO DEL MOUSE SE USA :hover */
+nav a:hover {
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+.productos {
+    width: 940px;
+    margin: 0 auto; /* MARGIN SE USA PARA DAR ESPACIOS EN EL EXTERIOR DEL ELEMENTO */
+    padding: 50px; /* PADDING SE USA PARA ESPACIO INTERNO DEL ELEMENTO */
+}
+/* ACA SE DIBUJAN LOS BORDES Y LOS CUADRADOS DE LA PARTE DE PRODUCTOS */
+.productos li {
+    display: inline-block; /* PONEMOS INLINE-BLOCK PARA QUE SE POSICIONEN UNO AL LADO DEL OTRO Y OCUPE UN ESPACIO PARA ABAJO */
+    text-align: center;
+    width: 30%;
+    vertical-align: top; /* ESTO ES PARA DECIRLE A LOS ITEMS QUE SU ALINEAMIENTO SEA VERTICAL */
+    margin: 0 1.5%;
+    padding: 20px 10px; /* PARA HACER QUE SE COLOQUEN ARRIBA Y A LOS COSTADOS AL MISMO TIEMPO LE PASAMOS 2 ELEMENTOS */
+    box-sizing: border-box; /* ESTO QUIERE DECIR QUE EL BORDE DE CADA UNO DE LOS ITEM SERA EL LIMITE DEL ESPACIO QUE VA A SER DEFINIDO, NO VAN A SUPERAR LOS 30% DEFINIDOS */
+    border: 2px solid #000;
+    border-left-width: 10px;
+    border-bottom-width: 10px;
+    /*border-radius: 0px 30px 45px 45px; BORDES COMBINADOS*/
+    border-radius: 40px;
+}
+
+.productos li:hover {
+    border-color: #c78c19;
+}
+/* PARA CAPTURAR EL CLICK DEL MOUSE USAMOS :active */
+.productos li:active {
+    border-color: green;
+}
+
+.productos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+/* ACA LO QUE HACEMOS ES AFECTAR AL ELEMENTO H2 DE LA LISTA, SI NO HACEMOS ESTO, NO VA A CAMBIAR DE TAMAÑO COMO QUEREMOS */
+.productos li:hover h2 {
+    font-size: 33px;
+}
+
+.producto-descripcion {
+    font-size: 18px;
+}
+
+.producto-precio {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+/* ACA SE PROGRAMA EL PIE DE PAGINA */
+footer {
+    text-align: center;
+    background: url(imagenes/bg.jpg);
+    padding: 40px;
+}
+
+.copyright {
+    color: aliceblue;
+    font-size: 13px;
+    margin: 20px;
+}
+
+
+/* CSS PARA NUESTRA PAGINA CONTACTO */
+
+
+form {
+    margin: 40px 80px; 
+}
+
+form label, form legend { /* PARA AGREGAR MAS ELEMENTOS CON EL MISMO ESTILO USAMOS LA "," */
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padron { 
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox {
+    margin: 20px 0px;
+}
+
+.enviar {
+    width: 40%;
+    padding: 15px 0px;
+    font-size: 18px;
+    font-weight: bold;
+    color: aliceblue;
+    background: orange;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all; /*ESTA PROPIEDAD LO QUE HACE ES DARLE UN PEQUEÑO RETRASO A UN ELEMTNO CUANDO EL MOUSE SE POSICIONA SOBRE EL O CUANDO SE CARGA LA PAGINA, CON EL "all" SE DA A TODO EL ELEMENTO*/
+    cursor: pointer; /*ESTA PROPIEDAD ES PARA CAMBIAR EL CURSO CUANDO SE POSICIONA SOBRE EL ELEMENTO, EN ESTE CASO, SE CAMBIA A LA MANITO*/
+}
+
+.enviar:hover {
+    background: darkorange;
+    transform: scale(1.2); /*ESTO LO QUE HACE ES AUMENTAR EL TAMAÑO DE DEL ELEMENTO, COMO SI LE HICIERAMOS ZOOM, SI QUEREMOS PONER MAS PROPIEDADES, TENEMOS QUE PONERLAS AL LADO*/
+}
+
+table {
+    margin: 40px 80px;
+}
+
+thead {
+    background: #555;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 8px 15px;
+}
+
+
+
+/* CSS para nuestra home (F1) */
+
+.banner {
+    width: 100%;
+}
+
+.principal {
+    padding: 3em 0px;
+    background: #fefefe;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2em; /*AL COLOCARLE "em" LE ESTAMOS DICIENDO QUE SEA "n" VECES MAYOR AL TAMAÑO POR DEFECTO QUE TIENE EL NAVEGADOR*/
+    margin: 0px 0px 1em;
+    clear: left; /*ESTO LO QUE HACE ES DECIR QUE TODO LO QUE VENGA DESPUES DEL TITULO PRINCIPAL, EL MISMO NO SE VEA AFECTADO POR LOS CAMBIOS*/
+}
+
+/* .titulo-principal:first-letter { ACA ESTAMOS USANDO UN PSEUDO-ELEMENTO, ESTE LO QUE HACE ES ALTERAR LA PRIMERA LETRA DEL TITULO O PALABRA QUE LE PASEMOS. EXISTEN OTROS ELEMENTOS COMO EL "before, after"(colocar algo antes y depues) Y EL "first-line"(modificar la primera linea de algun parrafo)
+    font-weight: bold;
+} */
+
+.principal p {
+    margin: 0px 0px 1em;
+}
+
+.principal strong {
+    font-weight: bold;
+}
+
+.principal em {
+    font-style: italic;
+}
+
+.carrera {
+    width: 120px;
+    float: left; /*ESTA PROPIEDAD HACE QUE LA IMAGEN FLOTE DE LA PAGINA, DEJANDO UNA SOMBRA PARA DAR ESE EFECTO DE REDONDEO CON EL TEXTO, Y LE DECIMOS LA POSICION DONDE QUEREMOS QUE HAGA LA SOMBRA*/ 
+    margin: 0px 20px 0px 0px ;
+}
+
+.mapa {
+    padding: 3em 0px;
+    background: linear-gradient(#fefefe, #888888); /*ESTA FUNCION LO QUE HACE ES PODER HACER UN DEGRADADO DE COLORES, RECIBE MUCHOS PARAMETROS Y SON LOS COLORES CON LOS QUE QUEREMOS FORMAR EL DEGRADES Y SE PUEDEN PASAR LOS GRADOS DE INCLINACION PARA HACER LAS LINEAS. TAMBIEN SE PUEDE DECIR QUE TAL COLOR OCUPE UN CIERTO ESPACIO DE LA PANTALLA O CON EL "radial-gradient" PARA HACERLO EN FORMA DE CIRCULOS*/
+
+}
+
+.mapa p {
+    text-align: center;
+    margin: 0px 0px 2em;
+}
+
+.mapa-contenido {
+    width: 940px;
+    margin: 0px auto;
+}
+
+.escuderias {
+    padding: 3em 0px;
+    background: #888888;
+}
+
+.contenido-escuderias {
+    width: 640px;
+    margin: 0px auto;
+}
+
+.lista-escuderias {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.items {
+    line-height: 1.5;/*LE DECIMOS, UNO MAS EL 50% EL TAMAÑO PADRON DE LAS LETRAS*/
+}
+
+.items:before {
+    content:"🟇";
+}
+
+.items:first-child {/*ACA ESTAMOS USANDO UNA PSEUDO-CLASE Y LE ESTAMOS DICIENDO QUE AL PRIMER HIJO, OSEA AL PRIMER ITEM, LE APLIQUE LOS ESTILOS*/
+    font-weight: bold;
+}
+
+.imagen-escuderias {
+    width: 60%;
+    transition: 400ms;
+    box-shadow: 10px 10px 30px 15px black; /*ESTE COMANDO ES PARA PONERLE UNA  SOMBRA AL ELEMENTO QUE QUERAMOS, RECIBE 3 PARAMETROS: UBICACION DE LA SOMBRA EN EL EJE 'X', UBICACION EN EL EJE 'Y' Y POR ULTIMO EL COLOR DE LA SOMBRA. PODEMOS AGREGARLE UN 4to PARAMETRO Y ES LA DIFUMINACION DE LA SOMBRA. Y UN 5to ES EL SPREAD, HASTA DONDE QUEREMOS QUE ESA SOMBRA LLEGUE. Y COLOCAR CUANTAS QUERAMOS, SEPARADAS POR ','. */
+}
+
+.imagen-escuderias:hover {
+    opacity: 0.3; /*ACA LO QUE HACEMOS ES DECIRLE CUANTA LUZ QUEREMOS QUE PASE CUANDO EL MOUSE PASE POR ENCIMA DE LA IMAGEN, ESTO LO HACEMOS CON EL COMANDO "opacity" DE OPACIDAD (OPACO) */
+}
+
+.video {
+    width: 560px;
+    margin: 1em auto;
+}
+
+@media screen and (max-width:480px) { /*ESSTO NOS PERMITE TRABJAR CON EXCEPCIONES, ACA LO QUE LE ESTAMOS DICIENDO ES: SI ENCONTRAS UNA PANTALLA CON HASTA 480px (limite maximo) APLICAME LO SIGUIENTE: */
+
+    /* PAGINA PRINCIPAL */
+    
+    h1 {
+        text-align: center; /* CENTRALIZAMOS EL LOGO DE NUESTRA BARBERIA */
+    }
+
+    nav {
+        position: static; /*DEFINIMOS LA POSICION ESTATICA PARA EL MENU DE NAVEGACION ASI DE ACOMODA */
+    }
+
+    .encabezado, .principal, .mapa-contenido, .contenido-escuderias, .video {
+        width: auto; /* AJUSTAMOS TODO LO SELECCIONADO ARRIBA PARA QUE SEA AUTOMATICAMENTE. */
+    }
+
+    .lista-escuderias, .imagen-escuderias {
+        width: 100%; /*MODIFICAMOS PARA UN 100% ASI  APARECEN UNO ABAJO DEL OTRO */
+    }
+
+    /* PAGINA PRODUCTOS */
+
+    .productos, .productos li {
+        width: auto;
+    }
+
+    /* PAGINA CONTACTO */
+
+    .enviar {
+        width: auto;
+    }
+}
+
+/* EN CSS EXISTE UNA FUNCION QUE SE LLAMA "calc()" ESTA LO QUE HACE ES HACER UN CALCULO, ESTO ES MUY UTIL A LA HORA DE TRABAJAR CON IMAGENES YA QUE PODEMOS CALCULAR EL TAMAÑO DE LA MISMA MEDIANTE UN CALCULO Y ASI PODER PRESENTAR UNA IMAGEN MUCHO MEJOR EN LO VISUAL Y DE CONTENIDO, YA QUE NO TODAS LAS PANTALLAS SON IGUALES Y HASTA INCLUSO SE ABREN DESDE UN DISPOSITIVO MOVIL, ESTO NOS VA A AYUDAR MUCHISIMO. EJ: width: calc(50% - (25px *4)). */
+
+/*
+Selector > , para acceder a los hijos de determinado elemento. Por ejemplo, para acceder todos los p dentro del main:
+main > p {
+}
+
+Selector +, para acceder al primer hermano de determinado elemento. Por ejemplo, para acceder el primer p después de una img:
+img + p {
+}
+
+Selector ~, para acceder a todos los hermanos de determinado elemento. Por ejemplo, para acceder todos los p después de una img:
+img ~ p {
+}
+
+Selector not, para acceder a los elementos, excepto algunos. Por ejemplo, para acceder a todos los p dentro de main excepto el p que tiene id missao:
+main p:not(#missao) {
+}
+*/
